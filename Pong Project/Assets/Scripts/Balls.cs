@@ -35,7 +35,7 @@ public class Balls : MonoBehaviour
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
         ball.velocity = new Vector2(speed * x, speed * y);
 
-        GetComponent<TrailRenderer>().enabled = true;
+        
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -105,8 +105,7 @@ public class Balls : MonoBehaviour
 
     public void Reset()
     {
-        GetComponent<TrailRenderer>().enabled = false;
-        
+       
 
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Clone");
